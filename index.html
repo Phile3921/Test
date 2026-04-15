@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Cà Mau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold">📷 Camera Cà Mau</h1>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="bg-yellow-300 py-10 text-center">
+      <h2 class="text-3xl font-bold">Lắp Đặt Camera Chuyên Nghiệp</h2>
+    </section>
+
+    <!-- Products -->
+    <section class="bg-white py-10">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="border p-4 rounded-xl">
+          <img class="mx-auto h-40" src="H6C.jpg" />
+          <h4>Ezviz H6C</h4>
+          <p class="text-red-500">690.000đ</p>
+          <button
+            onclick="
+              viewProduct(
+                'Ezviz H6C',
+                '690.000đ',
+                'Camera trong nhà xoay 360 độ, xem qua điện thoại',
+              )
+            "
+            class="bg-blue-500 text-white w-full py-2 mt-2"
+          >
+            Xem chi tiết
+          </button>
+        </div>
+
+        <div class="border p-4 rounded-xl">
+          <img class="mx-auto h-40" src="H8C.jfif" />
+          <h4>Ezviz H8C</h4>
+          <p class="text-red-500">1.290.000đ</p>
+          <button
+            onclick="
+              viewProduct(
+                'Ezviz H8C',
+                '1.290.000đ',
+                'Camera ngoài trời chống nước, quay ban đêm',
+              )
+            "
+            class="bg-blue-500 text-white w-full py-2 mt-2"
+          >
+            Xem chi tiết
+          </button>
+        </div>
+
+        <div class="border p-4 rounded-xl">
+          <img class="mx-auto h-40" src="ranger2.webp" />
+          <h4>Imou Ranger 2C</h4>
+          <p class="text-red-500">590.000đ</p>
+          <button
+            onclick="
+              viewProduct(
+                'Imou Ranger 2C',
+                '590.000đ',
+                'Camera wifi quay 360, đàm thoại 2 chiều',
+              )
+            "
+            class="bg-blue-500 text-white w-full py-2 mt-2"
+          >
+            Xem chi tiết
+          </button>
+        </div>
+
+        <div class="border p-4 rounded-xl">
+          <img class="mx-auto h-40" src="cruiser.png" />
+          <h4>Imou Cruiser</h4>
+          <p class="text-red-500">1.490.000đ</p>
+          <button
+            onclick="
+              viewProduct(
+                'Imou Cruiser',
+                '1.490.000đ',
+                'Camera ngoài trời, có đèn cảnh báo, quay ban đêm màu',
+              )
+            "
+            class="bg-blue-500 text-white w-full py-2 mt-2"
+          >
+            Xem chi tiết
+          </button>
+        </div>
+
+        <div class="border p-4 rounded-xl">
+          <img class="mx-auto h-40" src="C1C.webp" />
+          <h4>Camera wifi EZVIZ Trong Nhà C1C 1080P</h4>
+          <p class="text-red-500">490.000đ</p>
+          <button
+            onclick="
+              viewProduct(
+                'Camera wifi EZVIZ Trong Nhà C1C 1080P',
+                '490.000đ',
+                ' Thiết kế góc quan sát rộng tính năng thông minh đàm thoại 2 chiều',
+              )
+            "
+            class="bg-blue-500 text-white w-full py-2 mt-2"
+          >
+            Xem chi tiết
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL CHI TIẾT -->
+    <div
+      id="product-modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-white p-6 rounded-xl w-96">
+        <h3 id="p-name" class="text-xl font-bold"></h3>
+        <p id="p-price" class="text-red-500 mt-2"></p>
+        <p id="p-desc" class="mt-2"></p>
+        <a
+          href="https://zalo.me/0946877430"
+          class="block bg-yellow-400 text-center py-2 mt-4 rounded"
+          >Liên hệ mua</a
+        >
+        <button onclick="closeModal()" class="mt-2 text-sm">Đóng</button>
+      </div>
+    </div>
+
+    <script>
+      function viewProduct(name, price, desc) {
+        document.getElementById("p-name").innerText = name;
+        document.getElementById("p-price").innerText = price;
+        document.getElementById("p-desc").innerText = desc;
+        document.getElementById("product-modal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("product-modal").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
